@@ -27,15 +27,17 @@ extension MainVC: FloatyDelegate {
         }
         floaty.addItem("Галерея", icon: nil) { (item) in
             print("Gallery")
+            
+            self.chooseImagePickerAction()
         }
         floaty.addItem("Камера", icon: nil) { (item) in
             print("Camera")
+            
+            self.openScaner()
         }
         
         //addFloatyButtons(largeItems: true)
     }
-
-
 
     
     
