@@ -100,11 +100,10 @@
 			children = (
 				B1A000181EF97884003B2B6C /* MainVC.swift */,
 				B1A8EC8F1EFAC6D300BBD56D /* MainAddButton.swift */,
-				B16953971F19E87100D3C56E /* MainTopMenu.swift */,
 				B16953951F19E62800D3C56E /* MainBottomMenu.swift */,
 				B16953991F19EA3C00D3C56E /* MainBarButtons.swift */,
 				B1E2ECE91EF9A65F002828D0 /* MainCell.swift */,
-				B1E832411F00ED5C00A92886 /* DropDownMenu */,
+				B1E832411F00ED5C00A92886 /* MainTopMenu */,
 			);
 			name = MainVC;
 			sourceTree = "<group>";
@@ -164,15 +163,16 @@
 			path = AllDocs;
 			sourceTree = "<group>";
 		};
-		B1E832411F00ED5C00A92886 /* DropDownMenu */ = {
+		B1E832411F00ED5C00A92886 /* MainTopMenu */ = {
 			isa = PBXGroup;
 			children = (
+				B16953971F19E87100D3C56E /* MainTopMenu.swift */,
 				B1A6AD901EFD386400802CCD /* MainActSheetSorted.swift */,
 				B1A6AD961EFD461D00802CCD /* MainActSheetFiltered.swift */,
 				B1A6ADA01EFD4EA100802CCD /* MainActSheetTags.swift */,
 				B1A6ADAC1EFD63DC00802CCD /* MainSearch.swift */,
 			);
-			name = DropDownMenu;
+			name = MainTopMenu;
 			sourceTree = "<group>";
 		};
 		B1F4D5691EFB9F7E002BA5AF /* Alerts */ = {
