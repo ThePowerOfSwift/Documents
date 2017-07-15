@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="First" representedClassName=".First" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" defaultValueString="None" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toSecond" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Second" inverseName="toFirst" inverseEntity="Second" syncable="YES"/>
+    </entity>
+    <entity name="Second" representedClassName=".Second" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" defaultValueString="None" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toFirst" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="First" inverseName="toSecond" inverseEntity="First" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="First" positionX="-234" positionY="15" width="128" height="135"/>
+        <element name="Second" positionX="-18" positionY="27" width="128" height="135"/>
+    </elements>
+</model>

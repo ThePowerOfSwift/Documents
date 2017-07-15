@@ -1,0 +1,6 @@
+framework module Pods_AllDocs {
+  umbrella header "Pods-AllDocs-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,18 @@
+PODS:
+  - BEMCheckBox (1.4.1)
+  - CustomizableActionSheet (1.0.8)
+  - Floaty (3.0.0)
+
+DEPENDENCIES:
+  - BEMCheckBox
+  - CustomizableActionSheet
+  - Floaty (~> 3.0.0)
+
+SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  CustomizableActionSheet: d7d157b8235f331fea77efc50d63f628230fb261
+  Floaty: d1be5d323094f0de422bb615452d00ba26ac74dd
+
+PODFILE CHECKSUM: e1e36e8dd0248ce2ef3886a382c8e12be23096cd
+
+COCOAPODS: 1.2.1
