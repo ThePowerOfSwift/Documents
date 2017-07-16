@@ -56,77 +56,64 @@ extension UIVC_CameraScanner {
     
     // Get a photo from library
     //
-    @IBAction func getPhotoBtnClick(_ sender: Any) {
-        print(" ")
-        print("get photo click")
+    func getPhoto(image: UIImage) {
         
-        startWait()
-        capturingPhoto = true
-        cameraPreview.isHidden = true
-        edgesView.isHidden = true
-        cameraController?.pauseSession()
+        // photo returned in "image"
+        print("getPhoto orientation: " + Tools.getOrientation(o: image.imageOrientation))
         
-        // pick a photo from library
-        let picker = PhotoPicker()
-        picker.pickupPhoto(viewController: self) { (image) -> Void in
-            
-            if image == nil {
-                DispatchQueue.main.async {
-                    self.cameraController?.resumeSession()
-                    self.capturingPhoto = false
-                    self.cameraPreview.isHidden = false
-                    self.edgesView.isHidden = false
-                    self.viewSmallImage.isHidden = true
-                    self.stopWait()
-                }
-                return
+        // Save the captured image locally
+        self.imageCaptured = image
+
+        //1
+//        var temp: UIImage? = nil
+        
+        self.startWait()
+        
+        DispatchQueue.main.async {
+
+                self.smallImage.image = image
             }
             
-            // photo returned in "image"
-            
-            print("getPhoto orientation: " + Tools.getOrientation(o: image!.imageOrientation))
-            
-            // Save the captured image locally
-            self.imageCaptured = image
-            
-            var temp: UIImage? = nil
-            self.startWait()
-            
-            let backgroundQueue = DispatchQueue(label: "fr.ormaa.app", qos: .background, target: nil)
-            backgroundQueue.async {
-                
-                // try to detect the document, inside the loaded photo
-                // if yes, crop and transform the image (perspective)
-                let transform = ImageTransform()
-                temp = transform.DetectCropTransform(image: image!)
-                print("cropped image orientation: " + Tools.getOrientation(o: temp!.imageOrientation))
-                
-                if (temp == nil ){
-                    print("photo library document : did not found any document edges")
-                    let ac = UIAlertController(title: "Error", message: "photo library document : did not found any document edges", preferredStyle: .alert)
-                    ac.addAction(UIAlertAction(title: "OK", style: .default))
-                    self.present(ac, animated: true)
-                }
-
-                // set the display document image and small image
-                DispatchQueue.main.async {
-                    
-                    // set the cropped result
-                    if temp != nil {
-                        self.smallImage.image = temp
-                    }
-                    else {
-                        self.smallImage.image = image
-                    }
-                    
-                    // display the view
-                    self.viewSmallImage.isHidden = false
-                    self.stopWait()
-                }
-            }
-            
-
-        }
+            // display the view
+            self.viewSmallImage.isHidden = false
+            self.stopWait()
+        
+        //2
+//        let backgroundQueue = DispatchQueue(label: "fr.ormaa.app", qos: .userInteractive, target: nil)
+//        backgroundQueue.async {
+//            
+//            // try to detect the document, inside the loaded photo
+//            // if yes, crop and transform the image (perspective)
+//            
+//            let transform = ImageTransform()
+//            temp = transform.DetectCropTransform(image: image)
+//            
+//            print("cropped image orientation: " + Tools.getOrientation(o: temp!.imageOrientation))
+//            
+//            if (temp == nil ){
+//                print("photo library document : did not found any document edges")
+//                let ac = UIAlertController(title: "Error", message: "photo library document : did not found any document edges", preferredStyle: .alert)
+//                ac.addAction(UIAlertAction(title: "OK", style: .default))
+//                self.present(ac, animated: true)
+//            }
+//            
+//            // set the display document image and small image
+//            DispatchQueue.main.async {
+//                
+//                // set the cropped result
+//                if temp != nil {
+//                    self.smallImage.image = temp
+//                }
+//                else {
+//                    self.smallImage.image = image
+//                }
+//                
+//                // display the view
+//                self.viewSmallImage.isHidden = false
+//                self.stopWait()
+//            }
+//        }
+        
         
     }
     
@@ -183,12 +170,16 @@ extension UIVC_CameraScanner {
     // user cancel the image captured.
     // display back the camera preview
     @IBAction func transformCancelBtnClick(_ sender: Any) {
-        cameraController!.resumeSession()
-        viewSmallImage.isHidden = true
-        self.cameraPreview.isHidden = false
-        self.edgesView.isHidden = false
-        self.capturingPhoto = false
-
+        
+        if isEnterFromGallery {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            cameraController!.resumeSession()
+            viewSmallImage.isHidden = true
+            self.cameraPreview.isHidden = false
+            self.edgesView.isHidden = false
+            self.capturingPhoto = false
+        }
     }
     
     

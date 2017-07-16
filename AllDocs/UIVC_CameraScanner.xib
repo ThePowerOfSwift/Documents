@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIVC_CameraScanner" customModule="CameraDocScanner" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIVC_CameraScanner" customModule="AllDocs" customModuleProvider="target">
             <connections>
                 <outlet property="activityAnimation" destination="zKs-SF-qi6" id="D6T-nn-Jdw"/>
                 <outlet property="cameraBtn" destination="EF9-kr-VjQ" id="ggd-kp-5ET"/>
@@ -46,7 +46,7 @@
                         <constraint firstAttribute="width" secondItem="kqN-39-B8l" secondAttribute="height" multiplier="3:4" id="v90-bF-RcZ"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8t-v0-xgy" customClass="EdgesView" customModule="CameraDocScanner" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8t-v0-xgy" customClass="EdgesView" customModule="AllDocs" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="25" width="320" height="426"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -57,7 +57,7 @@
                     <rect key="frame" x="0.0" y="454" width="320" height="114"/>
                     <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF9-kr-VjQ" userLabel="Camera" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF9-kr-VjQ" userLabel="Camera" customClass="UIButtonDesignable" customModule="AllDocs" customModuleProvider="target">
                     <rect key="frame" x="125" y="462" width="96" height="96"/>
                     <color key="backgroundColor" red="0.97144924670311128" green="0.97791452586382555" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -82,32 +82,7 @@
                         <action selector="capturePhotoBtnClick:" destination="-1" eventType="touchUpInside" id="WNe-cz-2nR"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="H49-k0-aUY" userLabel="get photo" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
-                    <rect key="frame" x="5" y="458" width="50" height="50"/>
-                    <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="NPS-tj-fTq"/>
-                        <constraint firstAttribute="width" constant="50" id="VKR-gf-7va"/>
-                    </constraints>
-                    <state key="normal" image="pellicule">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="4"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="getPhotoBtnClick:" destination="-1" eventType="touchUpInside" id="1H6-fK-tt3"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hi-7K-YED" userLabel="flash" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hi-7K-YED" userLabel="flash" customClass="UIButtonDesignable" customModule="AllDocs" customModuleProvider="target">
                     <rect key="frame" x="5" y="514" width="50" height="50"/>
                     <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -143,7 +118,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwV-rW-6cc" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwV-rW-6cc" customClass="UIButtonDesignable" customModule="AllDocs" customModuleProvider="target">
                     <rect key="frame" x="241" y="481" width="70" height="40"/>
                     <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -169,10 +144,10 @@
                         <action selector="closeBtnClick:" destination="-1" eventType="touchUpInside" id="XLP-nT-CbM"/>
                     </connections>
                 </button>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oK-8b-uGy" customClass="UIViewDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oK-8b-uGy" customClass="UIViewDesignable" customModule="AllDocs" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2f4-gI-IY8" customClass="UIImageViewDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2f4-gI-IY8" customClass="UIImageViewDesignable" customModule="AllDocs" customModuleProvider="target">
                             <rect key="frame" x="2" y="25" width="316" height="421"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -194,7 +169,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkH-q2-UI5" userLabel="FondBoutons">
                             <rect key="frame" x="40" y="508" width="240" height="60"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-k3-1Qz" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-k3-1Qz" customClass="UIButtonDesignable" customModule="AllDocs" customModuleProvider="target">
                                     <rect key="frame" x="100" y="-2" width="60" height="42"/>
                                     <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -220,7 +195,7 @@
                                         <action selector="TransformOkBtnClick:" destination="-1" eventType="touchUpInside" id="rbU-X2-Cyj"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIo-xz-EPS" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIo-xz-EPS" customClass="UIButtonDesignable" customModule="AllDocs" customModuleProvider="target">
                                     <rect key="frame" x="10" y="-2" width="80" height="42"/>
                                     <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -246,7 +221,7 @@
                                         <action selector="transformCancelBtnClick:" destination="-1" eventType="touchUpInside" id="3Mb-oy-Ojm"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpO-19-flX" customClass="UIButtonDesignable" customModule="CameraDocScanner" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpO-19-flX" customClass="UIButtonDesignable" customModule="AllDocs" customModuleProvider="target">
                                     <rect key="frame" x="170" y="-2" width="60" height="42"/>
                                     <color key="backgroundColor" red="0.53333333329999999" green="0.047058823530000002" blue="0.12941176469999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -326,7 +301,6 @@
                 <constraint firstItem="z8t-v0-xgy" firstAttribute="top" secondItem="Y60-jb-M6z" secondAttribute="top" id="FkQ-1d-ALm"/>
                 <constraint firstItem="0oK-8b-uGy" firstAttribute="top" secondItem="Y60-jb-M6z" secondAttribute="top" id="GWO-du-hy5"/>
                 <constraint firstItem="bJa-9L-HBS" firstAttribute="centerY" secondItem="Y60-jb-M6z" secondAttribute="centerY" constant="-60" id="IKR-6y-ffc"/>
-                <constraint firstItem="H49-k0-aUY" firstAttribute="leading" secondItem="Y60-jb-M6z" secondAttribute="leading" constant="5" id="Kbt-kI-uEz"/>
                 <constraint firstItem="bJa-9L-HBS" firstAttribute="centerX" secondItem="Y60-jb-M6z" secondAttribute="centerX" id="Rfa-IJ-lJU"/>
                 <constraint firstAttribute="trailing" secondItem="kqN-39-B8l" secondAttribute="trailing" id="Sj5-0j-ZAh"/>
                 <constraint firstAttribute="bottom" secondItem="0oK-8b-uGy" secondAttribute="bottom" id="X8d-vs-O3N"/>
@@ -346,7 +320,6 @@
                 <constraint firstItem="kqN-39-B8l" firstAttribute="top" secondItem="Y60-jb-M6z" secondAttribute="top" id="qc3-ae-Fem"/>
                 <constraint firstItem="zKs-SF-qi6" firstAttribute="centerY" secondItem="Y60-jb-M6z" secondAttribute="centerY" id="sN9-Ko-mtC"/>
                 <constraint firstAttribute="bottom" secondItem="ue1-KD-nbZ" secondAttribute="bottom" constant="4" id="tUS-ey-fwG"/>
-                <constraint firstItem="9hi-7K-YED" firstAttribute="top" secondItem="H49-k0-aUY" secondAttribute="bottom" constant="6" id="vO7-Ar-Gh4"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
@@ -372,6 +345,5 @@
     <resources>
         <image name="Appareil photo" width="64" height="64"/>
         <image name="flash" width="102" height="102"/>
-        <image name="pellicule" width="340" height="310"/>
     </resources>
 </document>

@@ -123,7 +123,7 @@ extension MainVC {
             let sampleViewItem = CustomizableActionSheetItem()
             sampleViewItem.type = .view
             sampleViewItem.view = sampleView
-            sampleViewItem.height = 200
+            sampleViewItem.height = 120
             items.append(sampleViewItem)
         }
         

@@ -44,8 +44,6 @@ extension MainVC: ActSheetFilteredDelegate {
             self.filterName.text = "Папка"
         case "pdf":
             self.filterName.text = "PDF"
-        case "png":
-            self.filterName.text = "PNG"
         case "jpeg":
             self.filterName.text = "JPEG"
         case "txt":

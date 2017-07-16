@@ -24,9 +24,6 @@ class ActSheetFiltered: UIView {
         delegate?.setNameForPredicate(type(.pdf))
     }
     
-    @IBAction func png(_ sender: UIButton) {
-        delegate?.setNameForPredicate(type(.png))
-    }
     
     @IBAction func jpeg(_ sender: UIButton) {
         delegate?.setNameForPredicate(type(.jpeg))

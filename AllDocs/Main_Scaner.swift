@@ -12,6 +12,7 @@ extension MainVC: CameraScannerProtocol {
 
     
     func openScaner() {
+        
         let myVC = UIVC_CameraScanner(nibName: "UIVC_CameraScanner", bundle: nil)
         myVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         myVC.cameraScannerDelegate = self

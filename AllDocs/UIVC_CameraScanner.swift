@@ -55,27 +55,49 @@ CameraControllerProtocol, CropAndTransformImageProtocol {
     
     var capturingPhoto = false
     
+    var isEnterFromGallery = false
+    var imageFromGallery: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewSmallImage.isHidden = true
-        cameraBtn.isEnabled = false // need this to be sure it is already disabled when image is displayed. in old phone, we can see it enabled during a short time.
-        stopWait()
-        
-        // Tap gesture on smallImage
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(imageTapped(img:)))
-        smallImage.isUserInteractionEnabled = true
-        smallImage.addGestureRecognizer(tapGestureRecognizer)
-        
-        activityAnimation.transform = CGAffineTransform(scaleX: 2, y: 2)
-        
-        if !UIDevice.current.model.hasPrefix( "iPad") {
-            cameraBtn.backgroundColor = UIColor.white
-        }
-        else {
-            fondBordeaux.isHidden = true
-            fondBordeaux2.isHidden = true
+        if isEnterFromGallery {
+            
+            //self.getPhoto()
+            // ромашка Стоп
+            startWait()
+            // Отлов углов (Bool)
+            capturingPhoto = true
+            // Вью камеры
+            cameraPreview.isHidden = true
+            // Точки углов документа
+            edgesView.isHidden = true
+            // стоп камера
+            cameraController?.pauseSession()
+            
+            self.getPhoto(image: self.imageFromGallery!)
+
+            // pick a photo from library
+        } else {
+            
+            viewSmallImage.isHidden = true
+            cameraBtn.isEnabled = false // need this to be sure it is already disabled when image is displayed. in old phone, we can see it enabled during a short time.
+            stopWait()
+            
+            // Tap gesture on smallImage
+            let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(imageTapped(img:)))
+            smallImage.isUserInteractionEnabled = true
+            smallImage.addGestureRecognizer(tapGestureRecognizer)
+            
+            activityAnimation.transform = CGAffineTransform(scaleX: 2, y: 2)
+            
+            if !UIDevice.current.model.hasPrefix( "iPad") {
+                cameraBtn.backgroundColor = UIColor.white
+            }
+            else {
+                fondBordeaux.isHidden = true
+                fondBordeaux2.isHidden = true
+            }
         }
     }
     
@@ -83,16 +105,22 @@ CameraControllerProtocol, CropAndTransformImageProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         print("viewDidAppear - view size: " + String(describing: self.view.frame.size.width) + " / " + String(describing: self.view.frame.size.height))
-        
-        cameraBtn.isEnabled = false // need this, in case we come back from background
-        edgesDetection = EdgesDetection()
-        
-        if cameraController != nil && cameraController!.previewStarted {
-            // TODO ? resume ?
+        //guard isEnterFromGallery == false else { return }
+        if isEnterFromGallery == false {
+
+            
+            cameraBtn.isEnabled = false // need this, in case we come back from background
+            edgesDetection = EdgesDetection()
+            
+            if cameraController != nil && cameraController!.previewStarted {
+                // TODO ? resume ?
+            }
+            else {
+                initCamera()
+            }
+            
         }
-        else {
-            initCamera()
-        }
+        
     }
     
     

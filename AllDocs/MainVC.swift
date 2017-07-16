@@ -32,10 +32,6 @@ func addThreeObjects() {
     firs.date = NSDate()
     
     
-    let firss = First()
-    firss.name = "Png"
-    firss.type = type(.png)
-    firss.date = NSDate()
     
     let fird = First()
     fird.name = "Jpeg"
@@ -70,6 +66,8 @@ class MainVC: UIViewController, NSFetchedResultsControllerDelegate {
     
     
     var folder: First?
+    
+    var imageFromGallery: UIImage?
     
     var searchResultFirst  = [First]()
     var searchResultSecond = [Second]()
@@ -240,7 +238,6 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
             
             switch object.type {
             case type(.pdf)?    : cell.image.image = UIImage(named: "pdf")
-            case type(.png)?    : cell.image.image = UIImage(named: "png")
             case type(.jpeg)?   : cell.image.image = UIImage(named: "jpeg")
             case type(.txt)?    : cell.image.image = UIImage(named: "txt")
             case type(.zip)?    : cell.image.image = UIImage(named: "zip")
@@ -262,7 +259,6 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
             switch object.type {
             case type(.folder)? : cell.image.image = UIImage(named: "Folder")
             case type(.pdf)?    : cell.image.image = UIImage(named: "pdf")
-            case type(.png)?    : cell.image.image = UIImage(named: "png")
             case type(.jpeg)?   : cell.image.image = UIImage(named: "jpeg")
             case type(.txt)?    : cell.image.image = UIImage(named: "txt")
             case type(.zip)?    : cell.image.image = UIImage(named: "zip")
@@ -303,7 +299,6 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
                 
                 switch object.type! {
                 case type(.pdf)    : print("pdf")
-                case type(.png)    : print("png")
                 case type(.jpeg)   : print("jpeg")
                 case type(.txt)    : print("txt")
                 case type(.zip)    : print("zip")
@@ -341,7 +336,6 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
                     }
                     
                 case type(.pdf)    : print("pdf")
-                case type(.png)    : print("png")
                 case type(.jpeg)   : print("jpeg")
                 case type(.txt)    : print("txt")
                 case type(.zip)    : print("zip")

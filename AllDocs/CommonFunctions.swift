@@ -12,7 +12,7 @@ enum DocumentType {
     
     case folder
     case pdf
-    case png
+//    case png
     case jpeg
     case txt
     case zip
@@ -23,7 +23,7 @@ func type(_ docType: DocumentType) -> String {
     switch docType {
     case .folder: return "folder"
     case .pdf: return "pdf"
-    case .png: return "png"
+//    case .png: return "png"
     case .jpeg: return "jpeg"
     case .txt: return "txt"
     case .zip: return "zip"

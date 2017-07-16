@@ -44,7 +44,7 @@
 		B1A6ADA11EFD4EA100802CCD /* MainActSheetTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A6ADA01EFD4EA100802CCD /* MainActSheetTags.swift */; };
 		B1A6ADAD1EFD63DC00802CCD /* MainSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A6ADAC1EFD63DC00802CCD /* MainSearch.swift */; };
 		B1A8EC8E1EFAABE900BBD56D /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8EC8D1EFAABE900BBD56D /* CommonFunctions.swift */; };
-		B1A8EC901EFAC6D300BBD56D /* Main_AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8EC8F1EFAC6D300BBD56D /* Main_AddButton.swift */; };
+		B1A8EC901EFAC6D300BBD56D /* Main_FloatyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8EC8F1EFAC6D300BBD56D /* Main_FloatyButton.swift */; };
 		B1A99E671EF91AF9009A7AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A99E661EF91AF9009A7AD5 /* AppDelegate.swift */; };
 		B1A99E6C1EF91AF9009A7AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A99E6A1EF91AF9009A7AD5 /* Main.storyboard */; };
 		B1A99E6F1EF91AF9009A7AD5 /* AllDocs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1A99E6D1EF91AF9009A7AD5 /* AllDocs.xcdatamodeld */; };
@@ -97,7 +97,7 @@
 		B1A6ADA01EFD4EA100802CCD /* MainActSheetTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActSheetTags.swift; sourceTree = "<group>"; };
 		B1A6ADAC1EFD63DC00802CCD /* MainSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearch.swift; sourceTree = "<group>"; };
 		B1A8EC8D1EFAABE900BBD56D /* CommonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
-		B1A8EC8F1EFAC6D300BBD56D /* Main_AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main_AddButton.swift; sourceTree = "<group>"; };
+		B1A8EC8F1EFAC6D300BBD56D /* Main_FloatyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main_FloatyButton.swift; sourceTree = "<group>"; };
 		B1A99E631EF91AF9009A7AD5 /* AllDocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllDocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A99E661EF91AF9009A7AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1A99E6B1EF91AF9009A7AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 			children = (
 				B16954291F19FE9200D3C56E /* Quadrilateral.swift */,
 				B16954001F19FD0200D3C56E /* XIB */,
-				B16954011F19FD1000D3C56E /* Tools */,
 				B16954021F19FD3500D3C56E /* ViewControllers */,
+				B16954011F19FD1000D3C56E /* Tools */,
 				B16954041F19FD6600D3C56E /* UserControlls */,
 				B16954031F19FD5900D3C56E /* ViewsClass */,
 			);
@@ -204,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A000181EF97884003B2B6C /* MainVC.swift */,
-				B1A8EC8F1EFAC6D300BBD56D /* Main_AddButton.swift */,
+				B1A8EC8F1EFAC6D300BBD56D /* Main_FloatyButton.swift */,
 				B16953951F19E62800D3C56E /* Main_BottomMenu.swift */,
 				B16953991F19EA3C00D3C56E /* Main_BarButtons.swift */,
 				B169542B1F1A002A00D3C56E /* Main_Scaner.swift */,
@@ -462,7 +462,7 @@
 				B169541D1F19FE6D00D3C56E /* UIVC_EditEdgesPoints.swift in Sources */,
 				B1A99E6F1EF91AF9009A7AD5 /* AllDocs.xcdatamodeld in Sources */,
 				B16954101F19FE5F00D3C56E /* EdgesDetector.swift in Sources */,
-				B1A8EC901EFAC6D300BBD56D /* Main_AddButton.swift in Sources */,
+				B1A8EC901EFAC6D300BBD56D /* Main_FloatyButton.swift in Sources */,
 				B169541B1F19FE6D00D3C56E /* CameraController.swift in Sources */,
 				B16954281F19FE8600D3C56E /* UIImageViewDesignable.swift in Sources */,
 				B16954221F19FE7A00D3C56E /* EditableEdgesView.swift in Sources */,

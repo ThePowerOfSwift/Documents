@@ -17,14 +17,18 @@ extension MainVC: UIImagePickerControllerDelegate, UINavigationControllerDelegat
             picker.dismiss(animated: true, completion: nil)
             print(imageFromGallery.size)
             // -> Open borderDetect
+            let myVC = UIVC_CameraScanner(nibName: "UIVC_CameraScanner", bundle: nil)
+            myVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            myVC.cameraScannerDelegate = self
+            myVC.isEnterFromGallery = true
+            myVC.imageFromGallery = imageFromGallery
+            
+            self.present(myVC, animated: true, completion: nil)
+            
         }
     }
     
-    
-    
 
-    
-    
     
     
     func chooseImagePickerAction() {
